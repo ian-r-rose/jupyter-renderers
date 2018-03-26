@@ -1,0 +1,49 @@
+{
+  "name": "@jupyterlab/meta-extension",
+  "version": "0.1.0",
+  "description": "meta renderer for JupyterLab",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/*.d.ts",
+    "lib/*.js"
+  ],
+  "directories": {
+    "lib": "lib/"
+  },
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "dependencies": {
+    "@jupyterlab/application": "^0.15.1",
+    "@jupyterlab/fasta-extension": "^0.14.2",
+    "@jupyterlab/geojson-extension": "^0.14.4",
+    "@jupyterlab/rendermime": "^0.15.1",
+    "@jupyterlab/rendermime-interfaces": "^1.0.3"
+  },
+  "devDependencies": {
+    "rimraf": "~2.6.2",
+    "typescript": "~2.6.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "prepack": "npm run clean && npm run build",
+    "watch": "tsc -w"
+  },
+  "jupyterlab": {
+    "mimeExtension": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jupyterlab/jupyter-renderers.git"
+  },
+  "author": "Project Jupyter",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/jupyterlab/jupyter-renderers/issues"
+  },
+  "homepage": "https://github.com/jupyterlab/jupyter-renderers"
+}
